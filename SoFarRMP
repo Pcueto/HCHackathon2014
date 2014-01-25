@@ -1,0 +1,47 @@
+from bs4 import BeautifulSoup
+from urllib import *
+
+
+html_doc = """/Users/Paulinacueto/Desktop/Test"""
+SoupitDown = "/Users/Paulinacueto/Desktop/Results"
+
+NextStep = "/Users/Paulinacueto/Desktop/Results"
+FinalDoc = "/Users/Paulinacueto/Desktop/Finale "
+
+
+with open(html_doc, "r") as EATME:
+    soup = BeautifulSoup(EATME)
+    allOdd = soup.find_all('div', attrs={'class':'entry odd vertical-center'})
+    allEven = soup.find_all('div', attrs={'class':'entry even vertical-center'})
+    Results = open(SoupitDown, "w")
+    Results.write(str(allOdd))
+    Results.write(str(allEven))
+    Results.close()
+
+    
+    
+with open(NextStep, "r") as DRINKME:
+    soup = BeautifulSoup
+        overAvg = soup.find_all('div', attrs={'class':'profAverage'})
+        name = soup.find_all('div', attrs={'class':'profName'})
+        dept = soup.find_all('div', attrs={'class':'profDept'})
+        rating = soup.find_all('div', attrs={'class':'profRatings'})
+        avg = soup.find_all('div', attrs={'class':'profAvg'})
+        easy = soup.find_all('div', attrs={'class':'profEasy'})
+
+"""
+        #print allOdd, allEven
+        print "Professor: " + name.string
+        print "overall: " + overAvg.string
+        print "department: " + dept.string
+        print "Rating: " + rating.string
+        print "Average: " + avg.string
+        print "east?: " +easy.string
+"""
+
+#    allEven = soup.find_all('div', attrs={'class':'entry even vertical-center'})
+    #for professor in allEven:
+
+
+# going to want to compound the things
+# endresults.write(end results)
